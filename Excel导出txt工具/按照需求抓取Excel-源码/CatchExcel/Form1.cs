@@ -24,7 +24,10 @@ namespace CatchExcel
         /// 廠內生產件 2014.12.23增加
         /// </summary>
         private const string ZYLY11 = "廠內生產件";
-        private const string ZYLY2 = "採購件";
+        /// <summary>
+        /// 采购件 ：2014.12.23 输出修改为3。原来输出为2
+        /// </summary>
+        private const string ZYLY2_3 = "採購件";
         private const string ZYLY3 = "托工件";
         private const string ZDGL1 = "逐批領料";
         private const string ZDGL2 = "自動扣料";
@@ -195,11 +198,11 @@ Email,廠商地址,'' as 固定4,'' as 固定5,'' as 固定6,'' as 固定7,
                     {
                         builder.AppendFormat("\"{0}\",", "1");
                     }
-                    else if (dt.Rows[i][j].ToString() == BHZC2 || dt.Rows[i][j].ToString() == ZYLY2 || dt.Rows[i][j].ToString() == ZDGL2 || dt.Rows[i][j].ToString() == JZFS2)
+                    else if (dt.Rows[i][j].ToString() == BHZC2 || dt.Rows[i][j].ToString() == ZDGL2 || dt.Rows[i][j].ToString() == JZFS2)
                     {
                         builder.AppendFormat("\"{0}\",", "2");
                     }
-                    else if (dt.Rows[i][j].ToString() == BHZC3 || dt.Rows[i][j].ToString() == ZYLY3)
+                    else if (dt.Rows[i][j].ToString() == BHZC3 || dt.Rows[i][j].ToString() == ZYLY3 || dt.Rows[i][j].ToString() == ZYLY2_3)
                     {
                         builder.AppendFormat("\"{0}\",", "3");
                     }
